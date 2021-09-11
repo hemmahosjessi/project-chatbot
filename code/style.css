@@ -4,18 +4,14 @@
 
 body {
   margin: 0;
-  /* padding: 0; */
   font-family: 'Montserrat', sans-serif;
   background-color: #1a1a1a;
   background-image: url("assets/dogs_2.png");
   background-position: center;
   width: 100%;
-  /* position: absolute; */
-  /* overflow: hidden; */
 }
 
 h1 {
-  width: fit-content;
   font-weight: bold;
   font-size: 64px;
   line-height: 48px;
@@ -24,7 +20,7 @@ h1 {
   margin-bottom: 4rem;
   font-family: shrikhand;
   background-color: rgba(14, 13, 13, 0.8);
-  padding: 40px;
+  padding: 32px;
   transform: rotate(-10deg);
 }
 
@@ -71,13 +67,12 @@ input {
 
 main {
   margin: 0 auto;
-  width: 100%;
+  /* width: 100%; */
   max-width: 700px;
   height: 400px;
-  border-radius: 30px;
+  border-radius: 20px;
   background:rgba(14, 13, 13, 0.8);
-  padding: 20px 24px;
-  padding-top: 0;
+  padding: 1.5rem;
   box-sizing: border-box;
   display: flex;
   flex-direction: column;
@@ -94,7 +89,7 @@ main {
 
 .bot-msg {
   display: flex;
-  margin: 32px 8px 0 8px;
+  margin: 0px 8px 0 8px;
   flex-shrink: 0;
 }
 
@@ -141,7 +136,6 @@ main {
 .input-wrapper {
   display: flex;
   justify-content: center;
-  /* justify-content: space-between; */
 }
 
 .input-wrapper form {
@@ -167,7 +161,6 @@ button {
 
 button:hover {
   background-color: #b61287;
-  /* opacity: 0.6; */
   transition: all 0.2s ease;
 }
 
@@ -179,17 +172,6 @@ button:hover {
   justify-content: space-around;
 }
 
-/* .footer {
-  display: flex;
-  flex-direction: row;
-  justify-content: space-between;
-  align-items: center;
-  padding: 2rem;
-  margin-top: 6rem;
-  margin-bottom: 0;
-width: 100%;
-  background-color: rgba(14, 13, 13, 0.8);
-}  */
 
 .header {
   display: flex;
@@ -197,7 +179,6 @@ width: 100%;
   justify-content: space-between;
   align-items: center;
   padding: 2rem;
-  /* background-color: rgba(14, 13, 13, 0.2); */
 }
 
 a {
@@ -231,19 +212,22 @@ a {
 
 .mjau {
   background-color: rgb(10, 37, 112);
+  margin-right: 0%;
+}
+
+.voff-buttons-bottom {
+  display: none;
 }
 
 .github-logo {
   width: 40px;
   height: auto;
-  /* margin-left: 2rem; */
 }
 
 .pat-jes {
   display: flex;
   flex-direction: row;
   align-items: center;
-  /* padding-left: 2rem; */
   
 }
 
@@ -255,15 +239,28 @@ a {
 }
 
 
+
+
+/* MEDIAQUERY MOBILE */
+/* -------------------------------------- */
+
 @media (max-width: 767px) {
+
+  body {
+    margin-bottom: 64px;
+    padding-left: 1rem;
+    padding-right: 1rem;
+  }
 
   .header {
     flex-direction: column;
-    /* justify-content: center; */
     align-items: center;
     padding: 1rem;
     width: 100%;
-    /* background-color: rgba(14, 13, 13, 0.2); */
+  }
+
+  .heading {
+    margin-top: 1rem;
   }
 
   .github-logo {
@@ -285,42 +282,50 @@ a {
     padding: 1.5rem;
     transform: rotate(-5deg);
     margin-top: 0%;
+    margin-bottom: 2rem;
   }
+
 
   main {
-    margin: 1rem;
-    max-width: 343px;
-    height: 500px;
-    padding-top: 1rem;
-  } 
-
-  /* .send-btn {
-  width: 100%;
-  margin: 0%;
-  font-size: 14px;
-  } */
-
-  .voff-buttons {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: space-around;
-    width: 100%;
-    margin-top: 1.5rem;
+    height: 370px;
   }
 
-  .voff {
-    width: 100%;
-    margin-bottom: 1rem;
+  .send-btn {
+  font-size: 14px;
+  padding: 12px;
+  margin-right: 0%;
+  }
+
+  .voff-buttons {
+    display: none;
+  }
+
+  .voff-buttons-bottom {
+    max-width: 700px;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    margin-top: 1.5rem;
+    margin: 1rem auto;
   }
 
   .mjau {
-    width: 100%;
+    margin-right:0;
+    width: 50%;
+    font-size: 14px;
+    padding-left: 0%;
+    padding-right: 0%;
+  }
+
+  .voff {
+    width: 50%;
+    margin-right: 1rem;
+    padding-left: 0%;
+    padding-right: 0%;
   }
 
 
-  button {
-    padding: 1rem 1rem;
+  .button {
     margin-right: 0;
     font-size: 14px;
     line-height: 20x;
@@ -340,8 +345,7 @@ a {
 
   #name-input {
     margin: 0 0 1rem 0;
-    padding-top: 1rem;
-    padding-bottom: 1rem;
+    padding-top: 12px;
   }
 
   .input {
@@ -370,7 +374,7 @@ a {
   }
   
   .user-msg {
-  margin: 0;
+    margin: 0;
   }
 
   #yes {
@@ -398,8 +402,11 @@ a {
     width: 100%;
   }
  
-
 }
+
+
+/* MEDIAQUERY TABLET */
+/* -------------------------------------- */
 
 @media (min-width: 768px) and (max-width: 991px){
 
@@ -408,20 +415,20 @@ a {
     padding-left: 1rem;
     padding-right: 1rem;
     margin-bottom: 0%;
+    padding-bottom: 0%;
   }
 
   h1 {
-    font-size: 40px;
+    font-size: 64x;
+    padding:  1rem;
   }
 
   .heading {
     margin-top: 0%;
   }
-  
 
   .links {
     align-items: left;
-    /* flex-direction: row; */
     margin-left: 0%;
     margin-bottom: 2rem;
     font-size: 1rem;
@@ -432,7 +439,26 @@ a {
   }
 
   .mjau {
-    margin-right: 1rem;
+    margin-right:0;
+    width: 50%;
+  }
+
+  .voff {
+    width: 50%;
+  }
+
+
+  .voff-buttons {
+    display: none;
+  }
+
+  .voff-buttons-bottom {
+    max-width: 700px;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    margin-top: 1.5rem;
+    margin: 1rem auto;
   }
 
   main {
