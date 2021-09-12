@@ -4,13 +4,27 @@ const inputWrapper = document.getElementById('input-wrapper')
 const nameInput = document.getElementById('name-input')
 const nameForm = document.getElementById('name-form')
 
-// Försöker lägga till ljud på knapparna i footern här 
 
-// const audio = document.getElementById('voff')
 
-// document.getElementById('voff').addEventListener('click', () => {
-//   autoPlay (src="./assets/dogmark.mp3")
-// })
+
+// voffSound on Click //
+
+const voffSound = document.getElementById('voffSound')
+
+document.getElementById('voff').addEventListener('click', () => {
+  console.log('voff-knapp')
+  voffSound.Onclick = (playAudio)
+
+})
+
+// mjauAlert on Click //
+
+const mjauAlert = document.getElementById('mjau')
+
+mjauAlert.addEventListener('click', () => {
+  alert('Oh no, we don´t mjau here!')
+})
+ 
 
 // Global variables, if you need any, declared here
 let currentQuestion = 1
@@ -147,10 +161,8 @@ const handleInput = (event) => {
   currentQuestion++
 }
 
-//Here we passing the next bot question.
 
 
-// Set up your eventlisteners here
 
 // When website loaded, chatbot asks first question.
 // normally we would invoke a function like this:
